@@ -30,7 +30,12 @@ body {
 #noCoup_valide,
 #random_valide,
 #bouton1,
-#bouton2{
+#bouton2,
+#first_mem,
+#arriere_mem,
+#avant_mem,
+#last_mem
+{
     background: none;
     color: black;
     border: thin solid black;
@@ -38,8 +43,14 @@ body {
 #noCoup_valide:hover,
 #random_valide:hover,
 #bouton1:hover,
-#bouton2:hover{
+#bouton2:hover,
+#first_mem:hover,
+#arriere_mem:hover,
+#avant_mem:hover,
+#last_mem:hover
+{
     background: #0bc60b;
+    color: white;
 }
 #bouton1, #bouton2{
     height: 60px;

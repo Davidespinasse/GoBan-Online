@@ -6,7 +6,7 @@
    
 <!-- ici on met les effet de style en css pr donner de l'ordre au fonctinos du programme.-->
 <link rel="stylesheet" href="style/style.css">
-
+<link rel="stylesheet" href="style/font-awesome.css">
 </head>
    
    
@@ -40,10 +40,10 @@
  
  <div id="memoire"><!-- ici se trouveront les boutons et input pour le systÃ¨me de mÃ©moire.-->
  Pour naviguer dans la partie:<br>
- <button id="first_mem" name="first" type="button" onclick="first_mem();"> <== </button><!--recul rapid-->
-<button id="arriere_mem" name="arriere" type="button" onclick="backward_mem();"> <= </button><!--recul coup par coup-->
-<button id="avant_mem" name="avant" type="button" onclick="forward_mem();"> => </button> <!--avance coup par coup-->
-<button id="last_mem" name="last" type="button" onclick="last_mem();"> ==> </button> <!--avance rapid-->
+ <button id="first_mem" name="first" type="button" onclick="first_mem();"> <i class="fa fa-arrow-left"></i><i class="fa fa-arrow-left"></i> </button><!--recul rapid-->
+<button id="arriere_mem" name="arriere" type="button" onclick="backward_mem();"> <i class="fa fa-arrow-left"></i> </button><!--recul coup par coup-->
+<button id="avant_mem" name="avant" type="button" onclick="forward_mem();"> <i class="fa fa-arrow-right"></i> </button> <!--avance coup par coup-->
+<button id="last_mem" name="last" type="button" onclick="last_mem();"> <i class="fa fa-arrow-right"></i><i class="fa fa-arrow-right"></i> </button> <!--avance rapid-->
 <br> <br> 
 Aller au coup: <input id="noCoup" name="noCoup" size="4" value="0"> <button id="noCoup_valide" type="button" onclick="No_Coup_mem();">Valider </button><!-- avance ou recul vers le coup choisit-->
 
