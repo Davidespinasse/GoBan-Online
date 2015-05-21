@@ -1,0 +1,346 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic);
+
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 80px;
+  width: 100vw;
+  padding-left: 5%;
+  z-index: 10000;
+}
+
+#content_H {
+  height: 100%;
+  width: 100%;
+}
+
+a #H_F {
+  transition: all 0.7s ease;
+  position: relative;
+  float: right;
+  background-color: #2652AE;
+  height: 100%;
+  width: 9.7vw;
+  color: white;
+}
+
+a:hover #H_F {
+  position: relative;
+  float: right;
+  background-color: #11275B;
+  height: 100%;
+  width: 16%;
+  color: white;
+}
+
+.icon_F i{
+  padding: 25px 30px;
+} 
+
+.text_F {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  position: absolute;
+  padding-top: 33px;
+}
+
+#H_C {
+  position: relative;
+  display:inline;
+  float: left;
+  background-color: none;
+  height: 100%;
+  width: 12vw;
+  color: black;
+  text-align:center;
+}
+
+a #H_C {
+  transition: all 0.4s ease;
+  background-color: none;
+  color: black;
+}
+
+a:hover #H_C {
+  background-color: black;
+  color: white;
+}
+
+#H_C .text_C {
+  position: relative;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  top: 33px;
+}
+
+#H_L {
+  position: absolute;
+  display:inline;
+  float: left;
+  background-color: transparent;
+  height: 100%;
+  width: 30%;
+  margin-left: 6%;
+  padding-top: 27px;
+  color: black;
+  text-align:center;
+}
+
+a #H_L {
+  transition: all 0.5s ease;
+  color: black;
+  font-size: 28px;
+}
+
+a:hover #H_L {
+  color: black;
+  font-size: 28px;
+}
+
+#H_L .text_L {
+  position: absolute;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+}
+
+#H_M {
+  position: relative;
+  display:inline;
+  float: left;
+  background-color: transparent;
+  height: 100%;
+  width: 5%;
+  color: black;
+}
+
+#container_hamburger {
+  position: absolute;
+	cursor: pointer;
+	width: 25px;
+	height: 17px;
+	padding: 7px;
+  margin-top: 25px;
+}
+
+#hamburger_1 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	transition: 300ms all;
+	position: absolute;
+	top: 7px;
+}
+
+#hamburger_2 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	position: absolute;
+	top: 14px;
+	transition: 300ms all;
+}
+
+#hamburger_3 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	position: absolute;
+	top: 21px;
+	transition: 300ms all;
+}
+
+#menu {
+  position: fixed;
+  background: black;
+  padding-top: 80px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+
+#content_B {
+  width: 100vw;
+  height: 100vh;
+  z-index:1;
+}
+
+#home {
+  padding-top: 80px;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#about {
+  padding-top: 80px;
+  width: 100%;
+  height: 100vh;
+  background-color: #F1EFFC;
+  z-index: 1;
+}
+
+#game {
+  padding-top: 80px;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+}
+
+
+#team {
+  padding-top: 80px;
+  width: 100%;
+  height: 100vh;
+  background-color: #F1EFFC;
+  z-index: 1;
+}
+
+
+.layout_W {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://eattheordinary.com/wp-content/themes/theordinary/-/img/stars.png');
+}
+
+.layout_B {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://eattheordinary.com/wp-content/themes/theordinary/-/img/specks.png');
+}
+
+#mac {
+  display:none;
+  position: absolute;
+  float:left;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  font-family: 'Josefin Sans', sans-serif;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+  padding-top: 80px;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+eight: calc(100% / 5);
+	min-height: 54px;
+}
+
+.overlay ul li a {
+	font-weight: 300;
+	display: block;
+	color: #fff;
+  text-decoration: none;
+}
+
+.overlay ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: white;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+  margin-top: 47px;
+}
+
+.overlay ul li a:hover:before, a:focus {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: white;
+}
+
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
