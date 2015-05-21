@@ -86,8 +86,13 @@ function initialisations()
 		GlobalNoGroupe= 0; //variable qui contien le numÃ©ro du groupe globalement.
 
 	}
+var table = new Array();
+var x_joueur = 0 ;
+var y_joueur = 0 ;
 function clic(x, y)
-    {
+    {  x_joueur = x;
+       y_joueur = y;
+     document.getElementById('affichage').innerHTML = x_joueur, y_joueur;
 	    /*
 		CEtte fonction, est la fonction principale, elle se declanche lors du click, et apelle presque toutes les autres fonctions
 		pr vÃ©rifier les atari, ko , groupes entourÃ©s, etc...
