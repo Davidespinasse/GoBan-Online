@@ -414,12 +414,12 @@ var y = 0;
 			
 		if (joueur == 1) //si le joueur qui peu jouer est noir
 		{
-			mode_text= "Noir "; //la viriable prend le champ de text "noir"
+			mode_text= "Windows "; //la viriable prend le champ de text "Windows"
 			
 		}
 		else if (joueur == 2) //si le joueur qui peu jouer est blanc
 		{
-			mode_text = "Blanc";//la viriable prend le champ de text "blanc"
+			mode_text = "Apple";//la viriable prend le champ de text "Apple"
 			
 		}
 		 

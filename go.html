@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
    <head>
-       <title>Bienvenue sur mon site !</title>
+       <title>GoBan Online</title>
        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
    
 <!-- ici on met les effet de style en css pr donner de l'ordre au fonctinos du programme.-->
@@ -21,7 +21,7 @@
  
 <div id="nom_coups"><!--ici vont se trouver le texte affichÃ© en haut du plateau de jeu, tel que le numÃ©ro du coup actuel et la couleur du joueur actuel + les input pr les noms des joeurs.-->
 <br>
-<input id="Joueur1" type="text" name="noCoup" size="9" value="noir" > vs. <input id="Joueur2" type="text" name="noCoup" size="9" value="blanc" ><!--input pr les noms des joueurs-->
+<input id="Joueur1" type="text" name="noCoup" size="9" value="Windows" > vs. <input id="Joueur2" type="text" name="noCoup" size="9" value="Apple" ><!--input pr les noms des joueurs-->
 <div id="text_jeu"><!--ici vont se trouver le texte affichÃ© en haut du plateau de jeu, tel que le numÃ©ro du coup actuel et la couleur du joueur actuel--></div>
 
 </div><!--fin du div "nom_coup"-->
@@ -57,22 +57,22 @@ ainsi que le nombres de pierres mangÃ©es, la couleur des joueurs et leurs noms
 </div>
 
 
-<div id="random_shit" >
+<div id="random_shit">
 
-<!-- on va y mettre mon nom, cÃ©rateur de ce jeu, logiciel-->
+    <!-- on va y mettre mon nom, cÃ©rateur de ce jeu, logiciel-->
 
 
-<br><hr>
-Jouer au hasard 
-<input id="random_value" name="random_value" size="2" value="0">
- coup (maximum 150 coups)<br> 
- <br>
- <button id="random_valide" type="button" onclick="random_shit()" >
- 
- Jouer au hasard 
- 
- </button>
-</div>
+    <br>
+    <hr>Jouer au hasard
+    <input id="random_value" name="random_value" size="2" value="0">coup (maximum 150 coups)
+    <br>
+    <br>
+    <button id="random_valide" type="button" onclick="random_shit()">
+
+        Jouer au hasard
+
+    </button>
+</div> 
 
 </div> <!--fin du div"plateau de jeu"-->
 <br><br>
@@ -95,7 +95,7 @@ Jouer au hasard
 
 var T_goban= 500; //la taille du goban, plateau de jeu du jeu de go.
 
-var T_pierre = 30; // la taille des pierres blanches et noires .
+var T_pierre = 25; // la taille des pierres blanches et noires .
   
 
 
