@@ -99,7 +99,7 @@ function clic(x, y)
      else{
     document.getElementById('x2').innerHTML = x_joueur;
      document.getElementById('y2').innerHTML = y_joueur;  
-     }
+     } /* ceci sert juste a afficher les axes x et y des joueurs */
 	    /*
 		CEtte fonction, est la fonction principale, elle se declanche lors du click, et apelle presque toutes les autres fonctions
 		pr vÃ©rifier les atari, ko , groupes entourÃ©s, etc...
