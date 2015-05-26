@@ -151,3 +151,6 @@ body {
     height: 150px;
     background: white;
 }
+#y2, #x2, #y1, #x1{
+    display: inline-block;
+}

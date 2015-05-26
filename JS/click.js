@@ -92,7 +92,14 @@ var y_joueur = 0 ;
 function clic(x, y)
     {  x_joueur = x;
        y_joueur = y;
-     document.getElementById('affichage').innerHTML = x_joueur, y_joueur;
+     if ( joueur == 1 ) {
+     document.getElementById('x1').innerHTML = x_joueur;
+     document.getElementById('y1').innerHTML = y_joueur;   
+         }
+     else{
+    document.getElementById('x2').innerHTML = x_joueur;
+     document.getElementById('y2').innerHTML = y_joueur;  
+     }
 	    /*
 		CEtte fonction, est la fonction principale, elle se declanche lors du click, et apelle presque toutes les autres fonctions
 		pr vÃ©rifier les atari, ko , groupes entourÃ©s, etc...
