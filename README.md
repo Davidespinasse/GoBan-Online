@@ -6,8 +6,8 @@ is to create a game of Go in 6 weeks (May-June), using every technology we want 
 
 #Team - Last Of Os : 
 
-Alexandre DALLOT - Design
-Hugo QUINCEY - Communication
-Louis BRAHMI - Communication
-David ESPINASSE - Project Manager
-Guillaume LEBELT - Technical Manager
+- Alexandre DALLOT - Design
+- Hugo QUINCEY - Communication
+- Louis BRAHMI - Communication
+- David ESPINASSE - Project Manager
+- Guillaume LEBELT - Technical Manager
