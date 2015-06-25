@@ -3,7 +3,7 @@ body {
     font-family: "FuturaStd" sans-serif;
 }
 #plateau_jeu {
-    background-color: #555fff;
+    background-color: none;
     color: black;
     width: 750px;
     height: 570px;
@@ -12,20 +12,27 @@ body {
     background: white;
     color: black;
     width: 244px;
-    height: 130px;
+    height: 70px;
+    margin-top: 540px;
+    margin-left: -150px;
 }
 #joueur {
     background: white;
     color: black;
     width: 244px;
-    height: 170px
+    height: 170px;
+    margin-top: 310px;
+    margin-left: -400px;
+    
 }
 #nom_coups {
     background: white;
     color: black;
-    width: 506px;
-    height: 66px;
-    margin-bottom: 50px;
+    width: 200px;
+    height: 100px;
+    margin-top: 506px;
+    margin-left: -100px;
+    
 }
 #noCoup_valide,
 #random_valide,
@@ -59,14 +66,18 @@ body {
 #boutons {
     background-color: white;
     color: black;
-    width: 244px;
-    height: 66px
+    width: 200px;
+    height: 66px;
+    margin-top: 610px;
+    margin-left: -606px;
 }
 #random_shit {
     position: absolute;
     background: white;
     width: 244px;
-    height: 206px;
+    height: 96px;
+    margin-top: 140px;
+    margin-left: -150px;
 }
 #random_value {
     background: none;
@@ -111,7 +122,7 @@ body {
 #goban {
     position: absolute;
     left: 0px;
-    top: 66px;
+    top: 0px;
     z-index: 6;
     visibility: visible;
 }

@@ -28,7 +28,9 @@
 
 <!-- les plateaux et menus et options-->
 <center><div id="plateau_jeu"><!--dans ce div vont se trouver tous les plateau et menus et options-->
-
+<div id="goban" name="home" WIDTH=1000 HEIGHT=1000>
+<!--- ici viendront les images du goban(plateau de jeu de go) et les images des pierres, du rond rouge et du "forbidden" ( signe affichÃ© lors du ko)-->
+ </div>
 <div id="nom_coups"><!--ici vont se trouver le texte affichÃ© en haut du plateau de jeu, tel que le numÃ©ro du coup actuel et la couleur du joueur actuel + les input pr les noms des joeurs.-->
 <br>
 <input id="Joueur1" type="text" name="noCoup" size="9" value="Windows" > vs. <input id="Joueur2" type="text" name="noCoup" size="9" value="Apple" ><!--input pr les noms des joueurs-->
@@ -44,9 +46,7 @@
 
 </div><!--fin du div "boutons-->
 	
-<div id="goban" name="home" WIDTH=1000 HEIGHT=1000>
-<!--- ici viendront les images du goban(plateau de jeu de go) et les images des pierres, du rond rouge et du "forbidden" ( signe affichÃ© lors du ko)-->
- </div>
+
  
  <div id="memoire"><!-- ici se trouveront les boutons et input pour le systÃ¨me de mÃ©moire.-->
  Pour naviguer dans la partie:<br>
@@ -54,7 +54,7 @@
 <button id="arriere_mem" name="arriere" type="button" onclick="backward_mem();"> <i class="fa fa-arrow-left"></i> </button><!--recul coup par coup-->
 <button id="avant_mem" name="avant" type="button" onclick="forward_mem();"> <i class="fa fa-arrow-right"></i> </button> <!--avance coup par coup-->
 <button id="last_mem" name="last" type="button" onclick="last_mem();"> <i class="fa fa-arrow-right"></i><i class="fa fa-arrow-right"></i> </button> <!--avance rapid-->
-<br> <br> 
+<br> 
 Aller au coup: <input id="noCoup" name="noCoup" size="4" value="0"> <button id="noCoup_valide" type="button" onclick="No_Coup_mem();">Valider </button><!-- avance ou recul vers le coup choisit-->
 
 </div><!-- fin du div "memoire"-->
@@ -69,13 +69,10 @@ ainsi que le nombres de pierres mangÃ©es, la couleur des joueurs et leurs noms
 
 <div id="random_shit">
 
-    <!-- on va y mettre mon nom, cÃ©rateur de ce jeu, logiciel-->
+ 
 
-
-    <br>
-    <hr>Jouer au hasard
+    Jouer au hasard
     <input id="random_value" name="random_value" size="2" value="0">coup (maximum 150 coups)
-    <br>
     <br>
     <button id="random_valide" type="button" onclick="random_shit()">
 

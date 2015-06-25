@@ -515,10 +515,10 @@ var y = 0;
 		for(u=0; u<xD;u++)
 		{
 			
-			var z= 1+Math.round(Math.random()*18); //position au hasard sur x
-			var s= 1+Math.round(Math.random()*18);//position au hasard sur y.
+			var x= 1+Math.round(Math.random()*18); //position au hasard sur x
+			var y= 1+Math.round(Math.random()*18);//position au hasard sur y.
 			
-			click(z,s);//on simule le click a un endroit choisit au hasard sur le goban.
+			clic(x,y);//on simule le click a un endroit choisit au hasard sur le goban.
 			
 			if(coup==xD) //on arrÃªte la fonction , on gagne du temps, et on a ainsi le nombre exact de coups choisis.
 			{

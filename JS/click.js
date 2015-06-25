@@ -86,7 +86,7 @@ function initialisations()
 		GlobalNoGroupe= 0; //variable qui contien le numÃ©ro du groupe globalement.
 
 	}
-var table = new Array();
+
 var x_joueur = 0 ;
 var y_joueur = 0 ;
 function clic(x, y)
@@ -159,6 +159,7 @@ function clic(x, y)
 						{
 							coup_max_mem++; //pr savoir combien de coup il y a en tout dnas la partie. on l'augmente a chaque coup.
 						}
+                        
 						
 						//on supprime le coup en mÃ©moire, si il y en a un dans ce "coup". pr ensuite le remplacer ( permet de retourner dans la partie et de rejouer a un endroit si on veu reprendre)
 						for(i=0;i<21;i++)//on parcours sur x
@@ -187,11 +188,35 @@ function clic(x, y)
 						
 					}
 					
-					else if(joueur==2)//si c'est au blanc de jouer.
-					{
+					else//si c'est au blanc de jouer.
 					
-						document.getElementById("idblanche"+x+"_"+y).style.opacity=1; //on affiche la pierre blanche a l'endroit clickÃ©
+                      {
 						
+					}
+					
+					
+					/* ici, il fallait Ãªtre ingÃ©nieux, je m'explique. Quand on joue au go dans un endroit deja en atari, la pierre doit disparaitre et on ne change pas de joueur,
+					parceque ce coup est "interdit". Mais si la pierre jouÃ©e dans un atari prend une autre pierre, alors le coup est permis.
+					ainsi, la fonction "detect_atari" a Ã©tÃ© faite de facon a ce que si elle prend la valeur 1, elle Ã©limine seulement les pierres prises, si la pierre a mangÃ©e une autre pierre
+					en jouant. Parcontre si elle prend en argument 2 , elle Ã©limine les autre pierres qui sont en atari et qui sont appelÃ©e interdites.
+					il faut donc initialiser entre ses deux etapes.*/
+                      
+                   iadedingue();
+                  
+                    /* Ia  de dingue */
+                    function iadedingue(){
+                        
+                  
+                        if(joueur==2)//si c'est au blanc de jouer.
+					{
+			
+                        var x= 1+Math.round(Math.random()*18); //position au hasard sur x
+			var y= 1+Math.round(Math.random()*18);//position au hasard sur y.
+			
+			
+						document.getElementById("idblanche"+x+"_"+y).style.opacity=1; //on affiche la pierre blanche a l'endroit clickÃ©
+     document.getElementById('x2').innerHTML = x;
+     document.getElementById('y2').innerHTML = y; 
 						joueur=1; //on change de joueur.
 						
 						coup++;
@@ -222,15 +247,69 @@ function clic(x, y)
 							document.getElementById('avant_mem').disabled=true;//bloquer le bouton avant!
 							document.getElementById('last_mem').disabled=true;//bloquer le bouton last!
 						}
+						initialisations();
+					
+					var continu=detect_atari(1); //on applique la fonction et on donne la valeur de retour dans continu
+						
+					
+					//on rÃ©initianilise, pr le bon fonctionnement de la suite.
+					initialisations();
+					
+					var continu= detect_atari(2); //on refait pr savoir si il y a des pierres dechets.
+						
+					if(continu ==0) //si il y a des pierres dechets, on les suppriment.
+					{
+						if(joueur==1)//si c'est a noir de jouer.
+						{
+							document.getElementById("idblanche"+x+"_"+y).style.opacity=0;//on supprime la pierre, on laisse pas le joueur jouer.
+							coup--; //on supprime le coup dans la memoire
+							coup_max_mem--; //on supprime le coup dans la memoire
+							memento[x][y][coup] = 0; //supprime lecoup dansla memoire
+							joueur=2;//on annule le changement de joueur.
+						}
+						else if(joueur==2)//si c'est a blanc de jouer.
+						{
+							document.getElementById("idnoire"+x+"_"+y).style.opacity=0; //on supprime la pierre, on laisse pas le joueur jouer.
+							coup--; //on supprime le coup dans la memoire
+							coup_max_mem--; //on supprime le coup dans la memoire
+							memento[x][y][coup] = 0; //supprime lecoup dansla memoire
+							joueur=1;//on annule le changement de joueur.
+						}
 						
 					}
 					
-					
-					/* ici, il fallait Ãªtre ingÃ©nieux, je m'explique. Quand on joue au go dans un endroit deja en atari, la pierre doit disparaitre et on ne change pas de joueur,
-					parceque ce coup est "interdit". Mais si la pierre jouÃ©e dans un atari prend une autre pierre, alors le coup est permis.
-					ainsi, la fonction "detect_atari" a Ã©tÃ© faite de facon a ce que si elle prend la valeur 1, elle Ã©limine seulement les pierres prises, si la pierre a mangÃ©e une autre pierre
-					en jouant. Parcontre si elle prend en argument 2 , elle Ã©limine les autre pierres qui sont en atari et qui sont appelÃ©e interdites.
-					il faut donc initialiser entre ses deux etapes.*/
+					var verif_ko = ko_xy(x,y); //tout en exÃ©cutant la fonction, on donne la valeur du return a la variable "verif_ko"
+						
+					if(verif_ko == 1) //on a un ko. a droite.
+					{
+						Couleur[x+1][y]= 5; //le numero 5 est assignÃ© a la couleur du coup. Ca signifie qu'il y a un k o en cette case.
+						document.getElementById("idforbidden").style.zIndex= 3000;//on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.left= document.getElementById("idblanche"+(x+1)+"_"+y).style.left; //c la position en x, pas la couleur qui importe!
+						document.getElementById("idforbidden").style.top= document.getElementById("idblanche"+(x+1)+"_"+y).style.top;//c la position en y, pas la couleur qui importe!
+					}
+					else if(verif_ko == 2) //on a un ko. a gauche
+					{
+						Couleur[x-1][y]= 5; //5= ko //on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.zIndex= 3000;//on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.left= document.getElementById("idblanche"+(x-1)+"_"+y).style.left; //c la position x, pas la couleur qui importe!
+						document.getElementById("idforbidden").style.top= document.getElementById("idblanche"+(x-1)+"_"+y).style.top;//c la position en y, pas la couleur qui importe!
+					}
+					else if(verif_ko == 3) //on a un ko. en bas
+					{
+						Couleur[x][y+1]= 5; //5= ko //on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.zIndex= 3000;//on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.left= document.getElementById("idblanche"+(x)+"_"+(y+1)).style.left; //c la position x, pas la couleur qui importe!
+						document.getElementById("idforbidden").style.top= document.getElementById("idblanche"+(x)+"_"+(y+1)).style.top;//c la position en y, pas la couleur qui importe!
+					}
+					else if(verif_ko == 4) //on a un ko. en haut
+					{
+						Couleur[x][y-1]= 5; //5= ko //on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.zIndex= 3000;//on remet l'image au dessus du goban.
+						document.getElementById("idforbidden").style.left= document.getElementById("idblanche"+(x)+"_"+(y-1)).style.left; //c la position x, pas la couleur qui importe!
+						document.getElementById("idforbidden").style.top= document.getElementById("idblanche"+(x)+"_"+(y-1)).style.top;//c la position en y, pas la couleur qui importe!
+					}
+					}}
+                    /*fiezjifsvniesfn*/
 					
 					//on initialise d'abord!
 					initialisations();
@@ -294,6 +373,7 @@ function clic(x, y)
 						document.getElementById("idforbidden").style.left= document.getElementById("idblanche"+(x)+"_"+(y-1)).style.left; //c la position x, pas la couleur qui importe!
 						document.getElementById("idforbidden").style.top= document.getElementById("idblanche"+(x)+"_"+(y-1)).style.top;//c la position en y, pas la couleur qui importe!
 					}
+                
 				}
 			}
 		}
