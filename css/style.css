@@ -1,0 +1,1214 @@
+@import url(http://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700);
+
+body {
+  margin: 0;
+  padding: 0;
+  background:#f5f7f7;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+h5 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  color:black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#home {
+  z-index:1;
+  background: white;
+  margin: 0 auto;
+  margin-top: 4vh;
+  width: 95vw;
+  height: 100vh;
+}
+
+.triangle-menu {
+	width: 0;
+	height: 0;
+	border-top: 100px solid #f5f7f7;
+	border-right: 100px solid transparent;
+}
+
+#H_M {
+  z-index: 1000000;
+  position: fixed;
+  top:0;
+  left:0;
+  display:inline;
+  float: left;
+  background-color: transparent;
+  width: 5%;
+  color: #f5f7f7; 
+}
+
+#container_hamburger {
+  position: absolute;
+	cursor: pointer;
+	width: 25px;
+	height: 17px;
+	padding: 7px;
+  top: 15px;
+  left: 12px;
+}
+
+#hamburger_1 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	transition: 300ms all;
+	position: absolute;
+	top: 7px;
+}
+
+#hamburger_2 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	position: absolute;
+	top: 14px;
+	transition: 300ms all;
+}
+
+#hamburger_3 {
+	width: 25px;
+	height: 3px;
+	background: black;
+	position: absolute;
+	top: 21px;
+	transition: 300ms all;
+}
+
+#B_M {
+  z-index: 1000000;
+  position: fixed;
+  top:0;
+  right: 0;
+  display:inline;
+  float: right;
+  background-color: transparent;
+  color: #fafafa;
+}
+
+
+.triangle-facebook {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  width: 0;
+	height: 0;
+  color: black;
+	border-top: 100px solid #f5f7f7;
+	border-left: 100px solid transparent;
+}
+
+.triangle-facebook:hover {
+  cursor: pointer;
+  width: 0;
+	height: 0;
+  color: white;
+	border-top: 100px solid #2652AE;
+	border-left: 100px solid transparent;
+}
+
+.triangle-facebook i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+
+#logo {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 15vh;
+  margin: 0 auto;
+  padding-bottom: 30vh;
+}
+
+.text-title {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -140px;
+}
+
+#L-M h1 {
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: -10px;
+}
+
+#L-M h3 {
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  margin: 0;
+}
+
+.button-choice {
+  padding-top: 15vh;
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 18vw;
+}
+
+.solo {
+  display: inline;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.go {
+  color: black;
+  display: inline;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.online {
+  display: inline;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.solo-choice {
+  transition: all 0.4s ease;
+  width: 120px;
+  padding: 15px 25px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+}
+
+.solo-choice:hover  {
+  width: 120px;
+  padding: 15px 25px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+
+.online-choice {
+  transition: all 0.4s ease;
+  width: 120px;
+  padding: 15px 25px;
+  border: 3px solid #27ae60;
+  background-color: white;
+  color: #27ae60 !important ;
+}
+
+.online-choice:hover  {
+  width: 120px;
+  padding: 15px 25px;
+  border: 3px solid white;
+  background: #27ae60;
+  color : white !important;
+}
+
+.go {
+  color: white;
+}
+
+.discover {
+  opacity: 1;
+  position: absolute;
+  width: 15%;
+  height: 50px;
+  bottom: 10vh;
+  left: 43%;
+}
+
+.discover h3 {
+ text-align: center;
+ font-family: 'Rajdhani', sans-serif;
+ font-weight: 400;
+ margin-top: -1vh;
+}
+
+.discover h3 a {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.discover h3 a:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+#about {
+z-index:1;
+background: black;
+margin: 0 auto;
+width: 95vw;
+height: 100vh;
+}
+
+#D_M {
+  z-index: 100;
+  position: relative;
+  top:0;
+  right: 0;
+  display:inline;
+  float: right;
+  background-color: transparent;
+  color: #fafafa;
+}
+
+.text-title2 {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#D_M h1 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#D_M h3 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  margin: 0;
+}
+
+#D_M h2 {
+  color: #e74c3c;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: solid;
+  margin: 0;
+}
+
+
+#game {
+  z-index:1;
+  background: white;
+  margin: 0 auto;
+  width: 95vw;
+  height: 100vh;
+}
+
+#C_M {
+  z-index: 100;
+  position: relative;
+  top:0;
+  right: 0;
+  display:inline;
+  float: right;
+  background-color: transparent;
+  color: black;
+}
+
+#contentGame {
+  position: absolute;
+  margin-left: 24%;
+  margin-top: 30vh;
+  font-size: 60px;
+  color: red;
+  top: 0;
+}
+
+#C_M h1 {
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#C_M h3 {
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  padding-top: -30px;
+  margin: 0;
+}
+
+#C_M h2 {
+  color: #e74c3c;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: solid;
+  margin: 0;
+}
+
+.text-title3 {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#board {
+  width: 96%;
+  height: 100vh;
+  margin: 0 auto;
+  margin-left: 2%;
+}
+
+#team {
+  z-index:1;
+  background: black;
+  margin: 0 auto;
+  width: 95vw;
+  height: 100vh;
+}
+
+#T_M {
+  z-index: 100;
+  position: relative;
+  top:0;
+  right: 0;
+  display:inline;
+  float: right;
+  background-color: transparent;
+  color: #fafafa;
+}
+
+.text-title4 {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#T_M h1 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#T_M h3 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  margin: 0;
+}
+
+#T_M h2 {
+  color: #e74c3c;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: solid;
+  margin: 0;
+}
+
+.languages {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.languages2 {
+  margin-top: 0 !important;
+}
+
+.photo {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 95vw;
+  height: auto;
+}
+
+.cadreh1 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; absolute;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background: transparent;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-left: 18vw;
+  margin-right: 10vw;
+}
+
+.cadreh1 figure {
+  transition: all 0.4s ease;
+	background-image: url("../images/david.jpg");
+  height: 175px;
+  width: 175px;
+  margin: 0;
+}
+
+.cadreh1 p {
+  font-family: 'Rajdhani', sans-serif;
+  transform: rotate(-45deg);
+  position: absolute;
+  opacity: 0;
+  top: 36px;
+  left: 62px;
+  font-size: 32px;
+ }
+
+.cadreh1:hover p {
+  opacity:1;
+}
+
+.cadreh2:hover p {
+  opacity:1;
+}
+
+.cadreh3:hover p {
+  opacity:1;
+}
+
+.cadreb1:hover p {
+  opacity:1;
+}
+
+.cadreb2:hover p {
+  opacity:1;
+}
+
+.cadreh1:hover figure{
+  transition: all 0.4s ease;
+  cursor:pointer;
+  width: 175px;
+  height: 175px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+.cadreh2 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; absolute;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+
+}
+
+.cadreh2 figure {
+  transition: all 0.4s ease;
+  background-image: url("../images/guillaume.jpg");
+  height: 175px;
+  width: 175px;
+  margin: 0;
+}
+
+.cadreh2 p {
+  font-family: 'Rajdhani', sans-serif;
+  transform: rotate(-45deg);
+  position: absolute;
+  opacity: 0;
+  top: 36px;
+  left: 29px;
+  font-size: 32px;
+ }
+
+.cadreh2:hover figure{
+  transition: all 0.4s ease;
+  cursor:pointer;
+  width: 175px;
+  height: 175px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+.cadreh3 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; absolute;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.cadreh3 figure {
+  transition: all 0.4s ease;
+  background-image: url("../images/alexandre.jpg");
+  height: 175px;
+  width: 175px;
+  margin: 0;
+}
+
+.cadreh3 p {
+  font-family: 'Rajdhani', sans-serif;
+  transform: rotate(-45deg);
+  position: absolute;
+  opacity: 0;
+  top: 35px;
+  left: 49px;
+  font-size: 32px;
+ }
+
+.cadreh3:hover figure{
+  transition: all 0.4s ease;
+  cursor:pointer;
+  width: 175px;
+  height: 175px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+.cadreb1 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: block;
+  margin-left: 29vw;
+  margin-right: 10vw;
+}
+
+.cadreb1 figure {
+  transition: all 0.4s ease;
+  background-image: url("../images/louis.jpg");
+  height: 175px;
+  width: 175px;
+  margin: 0;
+}
+
+.cadreb1:hover figure{
+  transition: all 0.4s ease;
+  cursor:pointer;
+  width: 175px;
+  height: 175px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+.cadreb1 p {
+  font-family: 'Rajdhani', sans-serif;
+  transform: rotate(-45deg);
+  position: absolute;
+  opacity: 0;
+  top: 33px;
+  left: 30px;
+  font-size: 32px;
+ }
+
+.cadreb2 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: block;
+}
+
+.cadreb2 figure {
+  transition: all 0.4s ease;
+  background-image: url("../images/HUGO.jpg");
+  height: 175px;
+  width: 175px;
+  margin: 0;
+}
+
+.cadreb2 p {
+  font-family: 'Rajdhani', sans-serif;
+  transform: rotate(-45deg);
+  position: absolute;
+  opacity: 0;
+  top: 34px;
+  left: -11px;  
+  font-size: 32px;
+ }
+
+.cadreb2:hover figure{
+  transition: all 0.4s ease;
+  cursor:pointer;
+  width: 175px;
+  height: 175px;
+  border: 3px solid white;
+  background: #e74c3c;
+  color : white !important;
+}
+
+.top {
+  opacity: 1;
+  position: absolute;
+  width: 15%;
+  height: 50px;
+  bottom: -5vh;
+  left: 42%;
+}
+
+.top h3 {
+ text-align: center;
+ font-family: 'Rajdhani', sans-serif;
+ font-weight: 400;
+ margin-top: -1vh;
+ color: white;
+}
+
+.top h3 a {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: white;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.top h3 a:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+.bounce {
+  animation: inversebounce 2s ease-in-out infinite;
+}
+
+.overlay {
+  z-index: 10000;
+  font-family: 'Josefin Sans', sans-serif;
+	position: fixed;
+  top:-5vh;
+	width: 50%;
+	height: 105vh;
+	background: rgba(255, 255, 255, 0.95);
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+  top: 55%;
+  height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+  height: calc(100% / 5);
+	min-height: 54px;
+}
+
+.overlay ul li a {
+	font-weight: 300;
+	display: block;
+	color: black;
+  text-decoration: none;
+}
+
+.overlay ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: black;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+  margin-top: 8vh;
+}
+
+.overlay ul li a:hover:before, a:focus {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: black;
+}
+
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+.path{
+
+}
+
+.start {
+  opacity: 0;
+  stroke-dasharray: 2650;
+  stroke-dashoffset: 0;
+  animation: dash 15s linear;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+}
+
+#under9 {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#content9 {
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+}
+
+.shime {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight:300;
+  font-size:1.5em;
+  margin:0 auto;
+  padding: 0 40px;
+  padding-top: 40vh;
+  text-align: center;
+  color: rgba(0,0,0,0.1);
+  background: -webkit-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+  background: -moz-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+  background: gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  -webkit-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+
+@media screen and (max-width: 975px) {
+  .photo1 {
+    margin-left: 0 auto;
+  }
+
+  .photo2 {
+    margin: 0 auto;
+  }
+
+  .photo5 {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #home {
+    display: none;
+  }
+
+  #about {
+    display: none;
+  }
+
+  #game {
+    display: none;
+  }
+
+  #team {
+    display: none;
+  }
+
+  .triangle-menu {
+    display: none;
+}
+
+#container_hamburger {
+  display:none;
+}
+
+#hamburger_1 {
+  display:none;
+}
+
+#hamburger_2 {
+  display: none;
+}
+
+#hamburger_3 {
+  display:none;
+}
+
+#under9 {
+display: block;
+}
+
+.triangle-facebook {
+  display: none;
+}
+
+
+body {
+  background: black !important;
+  overflow-y: hidden !important;
+}
+
+}
+
+@media screen and (min-width: 801px) {
+  #under9 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .photo {
+    display: block;
+  }
+
+  .photo1 {
+    margin-left: 40%;
+  }
+
+  .photo2 {
+    position: absolute;
+    top: 500px;
+  }
+}
+
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+#T_M {
+  z-index: 100;
+  height: 120%;
+  position: relative;
+  top:0;
+  right: 0;
+  display:inline;
+  float: right;
+  background-color: black;
+  color: #fafafa;
+}
+
+.text-title4 {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#T_M h1 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-top: -5%;
+}
+
+#T_M h3 {
+  color: #fafafa;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  margin: 0;
+}
+
+#T_M h2 {
+  color: #e74c3c;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: solid;
+  margin: 0;
+}
+
+.languages {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.languages2 {
+  margin-top: 0 !important;
+}
+
+.photo {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 95vw;
+  height: auto;
+}
+
+.cadreh1 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; relative;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background: transparent;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-left: 19vw;
+  margin-right: 10vw;
+}
+
+.cadreh2 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; relative;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+
+}
+
+.cadreh3 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  position; relative;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-right: 10vw;
+  margin-left: 35vw;
+}
+
+.cadreb1 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: block;
+  margin-left: 20vw;
+  margin-right: 10vw;
+}
+
+.cadreb2 {
+  cursor:pointer;
+  transition: all 0.4s ease;
+  width: 175px;
+  height: 175px;
+  border: 3px solid #e74c3c;
+  background-color: white;
+  color: #e74c3c !important ;
+  float: left;
+  transform: rotate(45deg);
+  display: block;
+}
+
+.top {
+  opacity: 1;
+  position: absolute;
+  width: 15%;
+  height: 50px;
+  bottom: 10vh;
+  left: 42%;
+}
+}
+
+
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+@-ms-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+
+  100% {
+    background-position: top right;
+  }
+}
+
+@keyframes bounce {
+  0%   { transform:translate(0,-5px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,5px); opacity: 0; }
+}
+
+@keyframes inversebounce {
+  0%   { transform:translate(0,5px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,-5px); opacity: 0; }
+}
+
+@keyframes dash {
+  from { 
+    opacity: 1;
+    stroke-dashoffset: 2650;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}

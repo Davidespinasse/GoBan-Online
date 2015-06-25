@@ -1,0 +1,492 @@
+body {
+    background-color: black;
+    font-family: "FuturaStd" sans-serif;
+}
+
+input{
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    -webkit-apparence:none;
+    background-color:white;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: all 0.4s ease;
+}
+
+input:focus {
+    transition: all 0.4s ease;
+    font-family: 'Rajdhani', sans-serif;
+    outline: none !important;
+    background-color: black;
+    color: white;
+}
+
+.p1 {
+    display: inline;
+    float: left;
+}
+
+.p2 {
+    display: inline;
+    float: right;
+}
+
+.vs {
+    display: inline;
+    line-height: 2.5;
+}
+
+.navB {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.t1 {
+    display: inline;
+    float: left;
+    position: absolute;
+    margin-top: 2%;
+    left: 12%;
+}
+
+.t2 {
+    display: inline;
+    float: right;
+    position: absolute;
+    margin-top: 2%;
+    right: 12%;
+}
+
+#navigation {
+    width: 100%;
+    margin-top: 100%;
+}
+
+.nav_center {
+    display: inline;
+    width: 45%;
+}
+
+.nav_left {
+    display: inline;
+    float: left;
+    width: 23%;
+    margin-top: -45px;
+}
+
+.nav_right {
+    display: inline;
+    float: right;
+    width: 23%;
+    margin-top: -45px;
+}
+
+
+#Joueur2 {
+}
+
+#saisie {
+    text-align: center;
+}
+
+#affichage{
+    margin: 0 auto;
+    margin-top: 1%;
+    width: 500px;
+    height: auto;
+    background: none;
+    /*border: 2px solid red;*/
+    visibility: visible;
+}
+
+.joueur1 {
+  width: 200px;
+  float: left;
+  display: block;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.joueur2 {
+    width: 200px;
+    float: right;
+    display: block;
+    text-align: center;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+#plateau_jeu {
+    float: left;
+    display: inline;
+    background-color: none;
+    color: black;
+    width: 600px;
+    height: 570px;
+}
+#memoire {
+    color: black;
+    width: auto;
+    height: auto;
+}
+#joueur {
+    color: black;
+    width: auto;
+    height: auto; 
+}
+#nom_coups {
+    color: black;
+    width: auto;
+    height: auto;
+}
+#noCoup_valide,
+#random_valide,
+#bouton1,
+#bouton2,
+#arriere_mem,
+#avant_mem,
+{
+    background: none;
+    color: black;
+    border: thin solid black;
+    display: inline;
+    width: 5%;
+}
+#noCoup_valide:hover,
+#random_valide:hover,
+#bouton1:hover,
+#bouton2:hover,
+#first_mem:hover,
+#arriere_mem:hover,
+#avant_mem:hover,
+{
+    color: black;
+}
+
+
+#bouton1, #bouton2{
+
+}
+
+#bouton2 {
+    float: right;
+    display: inline;
+    color: black;
+}
+
+#bouton1 {
+float: left;
+display: inline;
+}
+#boutons {
+    color: black;
+    width: auto;
+    height: auto;
+}
+#random_shit {
+    position: absolute;
+    background: white;
+    width: 244px;
+    height: 96px;
+    margin-top: 140px;
+    margin-left: -150px;
+}
+#random_value {
+    background: none;
+    border-bottom: thin solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#plateau_jeu {
+position: relative;
+   margin-left: 15%;
+  z-index: 300;
+  color: black;
+  visibility: visible;
+  margin-right: -200%;
+}
+#nom_coups {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 300;
+    color: black;
+    visibility: visible;
+}
+#text_jeu {
+    margin-top: 2%;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    text-align: center;
+    z-index: 300;
+    color: black;
+    visibility: visible;
+}
+#boutons {
+    position: absolute;
+    left: 506px;
+    top: 0px;
+    z-index: 300;
+    color: black;
+    display: block;
+}
+#goban {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 6;
+    display: block;
+}
+#memoire {
+    position: absolute;
+    left: 506px;
+    top: 66px;
+    z-index: 300;
+    color: black;
+    visibility: visible;
+}
+#joueur {
+    z-index: 300;
+    color: black;
+    visibility: visible;
+}
+#random_shit {
+    position: absolute;
+    left: 506px;
+    top: 366px;
+    z-index: 300000;
+    color: black;
+    display: none;
+}
+#random_valide {
+    width: 122px;
+    height: 50px;
+    z-index: 30000;
+    color: black;
+    display: none;
+}
+#y2, #x2, #y1, #x1{
+    display: inline-block;
+}
+
+.button,
+.button::after {
+  -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button {
+  background: none;
+  font-family: 'Rajdhani', sans-serif;
+  border: 2px solid black;
+  color: black;
+  position: relative;
+}
+
+.button::before,
+.button::after {
+  background: black;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button2,
+.button2::after {
+  -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button2 {
+  background: none;
+  font-family: 'Rajdhani', sans-serif;
+  border: 2px solid white;
+  color: white;
+  position: relative;
+}
+
+.button2::before,
+.button2::after {
+  background: white;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.button2:hover {
+  color: black;
+}
+
+.btn-2 {
+    padding: 0px 5px 0px 5px;
+}
+
+.btn-2:hover {
+    cursor: pointer;
+}
+
+.btn-2::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn-2:hover:after {
+  height: 100%;
+}
+
+.btn-1 {
+    padding: 10px 10px 10px 10px;
+}
+
+.btn-1::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn-1:hover:after {
+  height: 100%;
+}
+
+.btn-3 {
+    padding: 10px 10px 10px 10px;
+    font-size: 1.5vw;
+}
+
+.btn-3::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn-3:hover:after {
+  height: 100%;
+}
+
+.ac-container{
+    width: 60%;
+    margin: 10px auto 30px auto;
+    text-align: left;
+}
+.ac-container label{
+    transition: all 0.4s ease;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: black;
+    line-height: 33px;
+    font-size: 19px;
+    background: white;
+    border-top: 1px solid black;
+}
+.ac-container label:hover{
+    background: black;
+    color: white;
+}
+
+.ac-container input:checked + label {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+    background: black;
+    color: white;
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+}
+.ac-container input:checked + label:hover:after{
+}
+.ac-container input{
+    display: none;
+}
+.ac-container article{
+    background: white;
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+.ac-container article p{
+    font-style: italic;
+    color: black;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 0px 20px;
+}
+.ac-container input:checked ~ article{
+    -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container input:checked ~ article.ac-small{
+      height: 100px;
+}
+.ac-container input:checked ~ article.ac-medium{
+        height: 210px;
+}
+.ac-container input:checked ~ article.ac-large{
+      height: 250px;
+}
+
+.leftAcc {
+  text-align: center;
+  width: 45%;
+  display: inline;
+  float: left;
+}
+
+.leftAcc img {
+    width: 50%;
+}
+
+.rightAcc {
+width: 42%;
+  display: inline;
+  float: left;
+  margin-top: 6%;
+  margin-left: -6%;
+  text-align: center;
+
+}

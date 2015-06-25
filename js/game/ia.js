@@ -411,21 +411,32 @@ var y = 0;
 		on l'apellera grace a un setinterval qui apellera la fonction chaque demi seconde.*/
 		 
 		var mode_text;//variable qui contien le champ de text qui donne la couleur du jouer qui doi jouer.
+		var Joueur1 = document.getElementById('Joueur1').value;
+		var Joueur2 = document.getElementById('Joueur2').value;
 			
 		if (joueur == 1) //si le joueur qui peu jouer est noir
 		{
-			mode_text= "Windows "; //la viriable prend le champ de text "Windows"
+			mode_text= Joueur1; //la viriable prend le champ de text "Windows"
 			
 		}
 		else if (joueur == 2) //si le joueur qui peu jouer est blanc
 		{
-			mode_text = "Apple";//la viriable prend le champ de text "Apple"
+			mode_text = Joueur2;//la viriable prend le champ de text "Apple"
 			
 		}
+
+		if (coup==0){
+			var strS= "<u>Shot:</u> <b>"+coup+"</b> on <b>"+coup_max_mem+"</b> shot at all. That is <b>"+mode_text+"</b> to play ";
+		}
+		else {
+			var strS= "<u>Shots:</u> <b>"+coup+"</b> on <b>"+coup_max_mem+"</b> shots at all. That is <b>"+mode_text+"</b> to play ";
+		}
 		 
-		var strS= "Coup: "+coup+" sur "+coup_max_mem+" coups en tout. C'est &agrave; "+mode_text+" de jouer "; //ici on assemble la phrase devant etre affichÃ©e en haut du plaetau de jeu.
+		 //ici on assemble la phrase devant etre affichÃ©e en haut du plaetau de jeu.
 		  
 		document.getElementById("text_jeu").innerHTML = strS; //ici on l'assigne au div se trouvant en haut du goban.(plateau de jeu)
+		document.getElementById("joueurone").innerHTML = Joueur1;
+		document.getElementById("joueurtwo").innerHTML = Joueur2;
 	}
 
  function score() 
@@ -435,36 +446,48 @@ var y = 0;
 	on apelle cette fonction toute les demisecondes avec setintrevall*/
 	
 	 var mode_text_J=""; //variable contenant le texte de base.
-	 //on rÃ©cupÃ©re les noms dans les input du haut.
+	 //on rÃ©cupÃ©re les noms dans les input du haut
 	 var Joueur1 = document.getElementById('Joueur1').value;
-	 var Joueur2 = document.getElementById('Joueur2').value;
+		var Joueur2 = document.getElementById('Joueur2').value;
 	 
 	 
 	 if (joueur == 1) //si le joueur joue avec noir
 	 {
-		mode_text_J= "<b>"+Joueur1+"</b>";// la valeur est en gras.//la valeur est en gras puisqu'il s'agit du jouer actuel
-		mode_text_J_1= Joueur2; //la valeur n'est pas en gras.
-		
 		var image= '<IMG SRC="images/Windows-logo.png" STYLE="width:35px; height:35px;" >'; //la taille de l'image de la couleur du jouer actuel est plus grande.
 		var image_1= '<IMG SRC="images/Apple-logo.png" STYLE="width:20px; height:20px;">';//la taille de l'image de la couleur du jouer suivant est moin grande.
 	 }
 	 else if (joueur == 2) //si le joueur joue avec blanc
 	 {
-		mode_text_J= "<b>"+Joueur2+"</b>"; //la valeur est en gras puisqu'il s'agit du jouer actuel
-		mode_text_J_1= Joueur1; //la valeur n'est pas en gras, il s'agit du jouer suivant.
-		
-		
-		var image= '<IMG SRC="images/Apple-logo.png" STYLE="width:35px; height:35px;">';//la taille de l'image de la couleur du jouer actuel est plus grande.
-		var image_1= '<IMG SRC="images/Windows-logo.png" STYLE="width:20px; height:20px;">';//la taille de l'image de la couleur du jouer suivant est moin grande.
+		var image_1= '<IMG SRC="images/Apple-logo.png" STYLE="width:35px; height:35px;">';//la taille de l'image de la couleur du jouer actuel est plus grande.
+		var image= '<IMG SRC="images/Windows-logo.png" STYLE="width:20px; height:20px;">';//la taille de l'image de la couleur du jouer suivant est moin grande.
+	 }
+
+	 var classt1 = '<div class="t1">';
+	 var classt2 = '<div class="t2">';
+	 var classEnd = '</div>';
+
+	 if(pierres_n==0 & pierres_b==0)
+	 {
+	 	var strS_j= classt1 + image + "<br> Eaten Stone: " + pierres_n +  classEnd;
+	 	strS_j +=  classt2 + image_1 + "<br> Eaten Stone: " + pierres_b + classEnd;
+	 	document.getElementById("joueur").innerHTML = strS_j;
+	 }
+	 else if(pierres_n!=0 & pierres_b!=0){
+	 	var strS_j= classt1 + image + "<br> Eaten Stones: " + pierres_n +  classEnd;
+	 	strS_j +=  classt2 + image_1 + "<br> Eaten Stones: " + pierres_b + classEnd;
+	 	document.getElementById("joueur").innerHTML = strS_j;
+	 }
+	 else if(pierres_n==0 & pierres_b!=0){
+	 	var strS_j= classt1 + image + "<br> Eaten Stone: " + pierres_n +  classEnd;
+	 	strS_j +=  classt2 + image_1 + "<br> Eaten Stones: " + pierres_b + classEnd;
+	 	document.getElementById("joueur").innerHTML = strS_j;
+	 }
+	 else if(pierres_n!=0 & pierres_b==0){
+	 	var strS_j= classt1 + image + "<br> Eaten Stones: " + pierres_n +  classEnd;
+	 	strS_j +=  classt2 + image_1 + "<br> Eaten Stone: " + pierres_b + classEnd;
+	 	document.getElementById("joueur").innerHTML = strS_j;
 	 }
 	  
-	 var strS_j= "<br><small>"+image_1+"    " + mode_text_J_1 + "    "+image_1+"<br> pierres mang&eacute;es: " +pierres_n+"</small><br><br>"; //joueur qui attend
-	 
-	 strS_j += "<big>"+image+"    " + mode_text_J + "    "+image+"<br> pierres mang&eacute;es: " +pierres_b+"</big>"; //joueur qui joue actuellement
-	 
-	 
-	  
-	 document.getElementById("joueur").innerHTML = strS_j; //on attribue au div qui se trouve en dessous du systÃ¨me de mÃ©moire.
  }
  
  function last_image()
@@ -515,10 +538,10 @@ var y = 0;
 		for(u=0; u<xD;u++)
 		{
 			
-			var z= 1+Math.round(Math.random()*18); //position au hasard sur x
-			var s= 1+Math.round(Math.random()*18);//position au hasard sur y.
+			var x= 1+Math.round(Math.random()*18); //position au hasard sur x
+			var y= 1+Math.round(Math.random()*18);//position au hasard sur y.
 			
-			click(z,s);//on simule le click a un endroit choisit au hasard sur le goban.
+			clic(x,y);//on simule le click a un endroit choisit au hasard sur le goban.
 			
 			if(coup==xD) //on arrÃªte la fonction , on gagne du temps, et on a ainsi le nombre exact de coups choisis.
 			{
