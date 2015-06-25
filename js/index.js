@@ -1,3 +1,7 @@
+// Gestion Menu, avec animation Hamburger et gestion des overlay pour apparition disparition du menu, lorsqu'on clique sur l'icone menu ou que l'on clique sur un lien
+
+
+// Animation Hamburger menu, Barres/Croix
 var compteur_second = 0;
 
 $('#container_hamburger').on('click', function() {
@@ -27,10 +31,10 @@ $('#container_hamburger').on('click', function() {
 	}
 });
 
+// Animation ouverture du menu de navigation
 (function() {
-		var triggerBttn = document.getElementById( 'trigger-overlay'),
+		var triggerBttn = document.getElementById('trigger-overlay'),
 		overlay = document.querySelector( 'div.overlay' ),
-		closeBttn = overlay.querySelector( 'button.overlay-close' );
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -64,6 +68,87 @@ $('#container_hamburger').on('click', function() {
 		}
 	}
 
+	// Gestion de fermeture lors d'un clic soit sur un lien soit en dehors du menu.. a retravailler pour plus d'otpimisation.
+
+	$('.overlay a').on('click', function(){
+		$('#trigger-overlay').trigger('click');
+		compteur_second == 1
+			$('#hamburger_2').css('opacity', '1')
+			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
+			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
+			setTimeout(function() {
+				compteur_second = 0;
+			},100)
+			setTimeout(function() {
+				$('#hamburger_1').css({'top' : '7px'})
+				$('#hamburger_3').css({'top' : '21px'})
+			},300)
+			return false;
+	});
+
+	$('#home').on('click', function(){
+		$('#trigger-overlay').trigger('click');
+		compteur_second == 1
+			$('#hamburger_2').css('opacity', '1')
+			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
+			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
+			setTimeout(function() {
+				compteur_second = 0;
+			},100)
+			setTimeout(function() {
+				$('#hamburger_1').css({'top' : '7px'})
+				$('#hamburger_3').css({'top' : '21px'})
+			},300)
+			return false;
+	});
+
+	$('#about').on('click', function(){
+		$('#trigger-overlay').trigger('click');
+		compteur_second == 1
+			$('#hamburger_2').css('opacity', '1')
+			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
+			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
+			setTimeout(function() {
+				compteur_second = 0;
+			},100)
+			setTimeout(function() {
+				$('#hamburger_1').css({'top' : '7px'})
+				$('#hamburger_3').css({'top' : '21px'})
+			},300)
+			return false;
+	});
+
+	$('#game').on('click', function(){
+		$('#trigger-overlay').trigger('click');
+		compteur_second == 1
+			$('#hamburger_2').css('opacity', '1')
+			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
+			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
+			setTimeout(function() {
+				compteur_second = 0;
+			},100)
+			setTimeout(function() {
+				$('#hamburger_1').css({'top' : '7px'})
+				$('#hamburger_3').css({'top' : '21px'})
+			},300)
+			return false;
+	});
+
+	$('#team').on('click', function(){
+		$('#trigger-overlay').trigger('click');
+		compteur_second == 1
+			$('#hamburger_2').css('opacity', '1')
+			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
+			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
+			setTimeout(function() {
+				compteur_second = 0;
+			},100)
+			setTimeout(function() {
+				$('#hamburger_1').css({'top' : '7px'})
+				$('#hamburger_3').css({'top' : '21px'})
+			},300)
+			return false;
+	});
+
 	triggerBttn.addEventListener( 'click', toggleOverlay );
-	closeBttn.addEventListener( 'click', toggleOverlay );
 })();
