@@ -68,7 +68,7 @@ $('#container_hamburger').on('click', function() {
 		}
 	}
 
-	// Gestion de fermeture lors d'un clic soit sur un lien soit en dehors du menu.. a retravailler pour plus d'otpimisation.
+	// Gestion de fermeture lors d'un clic soit sur un lien soit en dehors du menu.
 
 	$('.overlay a').on('click', function(){
 		$('#trigger-overlay').trigger('click');
@@ -86,69 +86,6 @@ $('#container_hamburger').on('click', function() {
 			return false;
 	});
 
-	$('#home').on('click', function(){
-		$('#trigger-overlay').trigger('click');
-		compteur_second == 1
-			$('#hamburger_2').css('opacity', '1')
-			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
-			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
-			setTimeout(function() {
-				compteur_second = 0;
-			},100)
-			setTimeout(function() {
-				$('#hamburger_1').css({'top' : '7px'})
-				$('#hamburger_3').css({'top' : '21px'})
-			},300)
-			return false;
-	});
-
-	$('#about').on('click', function(){
-		$('#trigger-overlay').trigger('click');
-		compteur_second == 1
-			$('#hamburger_2').css('opacity', '1')
-			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
-			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
-			setTimeout(function() {
-				compteur_second = 0;
-			},100)
-			setTimeout(function() {
-				$('#hamburger_1').css({'top' : '7px'})
-				$('#hamburger_3').css({'top' : '21px'})
-			},300)
-			return false;
-	});
-
-	$('#game').on('click', function(){
-		$('#trigger-overlay').trigger('click');
-		compteur_second == 1
-			$('#hamburger_2').css('opacity', '1')
-			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
-			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
-			setTimeout(function() {
-				compteur_second = 0;
-			},100)
-			setTimeout(function() {
-				$('#hamburger_1').css({'top' : '7px'})
-				$('#hamburger_3').css({'top' : '21px'})
-			},300)
-			return false;
-	});
-
-	$('#team').on('click', function(){
-		$('#trigger-overlay').trigger('click');
-		compteur_second == 1
-			$('#hamburger_2').css('opacity', '1')
-			$('#hamburger_1').css({'transform' : 'rotateZ(0deg)'})
-			$('#hamburger_3').css({'transform' : 'rotateZ(0deg)'})
-			setTimeout(function() {
-				compteur_second = 0;
-			},100)
-			setTimeout(function() {
-				$('#hamburger_1').css({'top' : '7px'})
-				$('#hamburger_3').css({'top' : '21px'})
-			},300)
-			return false;
-	});
 
 	triggerBttn.addEventListener( 'click', toggleOverlay );
 })();
